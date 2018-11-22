@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="slickModal.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://browser.sentry-cdn.com/4.3.2/bundle.min.js" crossorigin="anonymous"></script>
+    <style>
+        .noselect {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+        }
+        .install-btn {
+            cursor: pointer;
+        }
+        #stepsbar-container, #lp-container, #flows-container, #retry-container,#exit-container,#ty-container,#info-container {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="noselect" style="padding: 0; margin: 0; visibility: hidden;">
+<div id="stepsbar-container"></div>
+<div id="lp-container"></div>
+<div id="flows-container"></div>
+<div id="retry-container"></div>
+<div id="exit-container"></div>
+<div id="ty-container"></div>
+<div id="info-container"></div>
+<script>
+    if (location.href.indexOf('gnum=6') > -1) {
+        Sentry.init({dsn: 'https://6dfc74c38f7647199d9120c10e4ab985@sentry.io/1326193'});
+    }
+</script>
+<script src="slickModal.min.js"></script>
+<script src="bundle.js"></script>
+</body>
+</html>
+

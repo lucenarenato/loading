@@ -1,0 +1,95 @@
+<html>
+<head>
+	<style>
+    .loading-bro {
+        text-align: center;
+        font-family: sans-serif !important;
+    }
+    .loading-bro > h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        font-weight: 300;
+        color: #8E8E8E;
+    }
+
+    #load {
+        width: 150px;
+        animation: loading 3s linear infinite;
+    }
+    #load #loading-inner {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+        stroke-width: 10;
+        stroke-miterlimit: 10;
+        stroke-linecap: round;
+        animation: loading-circle 2s linear infinite;
+        stroke: #51BBA7;
+        fill: transparent;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes loading-circle {
+        0% {
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dashoffset: -600;
+        }
+    }
+
+</style>
+	<script>
+		var i = setInterval(function () {
+    
+		    clearInterval(i);
+		  
+		    // O código desejado é apenas isto:
+		    document.getElementById("loading").style.display = "none";
+		    document.getElementById("conteudo").style.display = "inline";
+
+		}, 4000);
+	</script>
+</head>
+<body>
+	<h3>Esmagamento.rsrsrs</h3>
+	<div id="loading" style="display: block">
+    	<img src="http://media.giphy.com/media/FwviSlrsfa4aA/giphy.gif" style="width:150px;height:150px;" />
+	</div>
+
+	<!-- COLOQUE A DIV "loading" ACIMA DE TODO O CONTEUDO DO SITE (ABAIXO DA <body>) -->
+
+	<div id="conteudo" style="display: none">
+	  Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+	 </div>
+
+<hr>
+<h3>Loading verde css</h3>
+<!-- ========== START COPYING HERE ========== -->
+
+<div id="popup-1-steps-spinner" class="slickModal">
+    <div class="slickWindow">
+        <div class="loading-bro">
+            <h1>Loading</h1>
+            <svg id="load" x="0px" y="0px" viewBox="0 0 150 150">
+                <circle id="loading-inner" cx="75" cy="75" r="60"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<script src="@PATH@/stepsspinner.js"></script>
+<!-- ========== END COPYING HERE ========== -->
+<hr>
+
+
+
+</body>
+</html>
